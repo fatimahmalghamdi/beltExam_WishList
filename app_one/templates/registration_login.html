@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+
+<body>
+    {% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-{{ message.tags }}">{{ message }}</div>
+    {% endfor %}
+    {% endif %}
+    <div id="container">
+        <div id="registeration">
+            <h1>Registration</h1>
+            <form method="post" action="/registeration">
+                {% csrf_token %}
+                <fieldset style="border: 2px solid black;">
+                    <legend>Register</legend>
+                    <label for="the_name">Name</label>
+                    <input id="the_name" name="the_name" type="text"><br>
+
+                    <label for="user_name">User_Name</label>
+                    <input id="user_name" name="user_name" type="text"><br>
+
+                    <label for="reg_pass">Password</label>
+                    <input id="reg_pass" name="reg_pass" type="password"><br>
+
+                    <h4>* password should be at least 8 characters</h4>
+                    <label for="con_ps">Confirm PW</label>
+                    <input id="con_ps" name="con_ps" type="password"><br>
+
+                    <label for="date_hired">Date Hired: </label>
+                    <input id="date_hired" name="date_hired" type="date"><br>
+
+                    <input type="hidden" name="check" value="registration">
+                    <input type="submit" value="Register" id="btn">
+                </fieldset>
+            </form>
+        </div>
+
+        <div id="login">
+            <h1>Login</h1>
+            <form method="post" action="login">
+                {% csrf_token %}
+                <fieldset style="border: 2px solid black;">
+                    <legend>LogIn</legend>
+                    <label for="log_userName">User Nmae</label>
+                    <input id="log_userName" name="log_userName" type="text"><br>
+
+                    <label for="login_pass">Password</label>
+                    <input id="login_pass" name="login_pass" type="password"><br>
+
+                    <input type="hidden" name="check" value="login">
+                    <input type="submit" value="Login" id="btn">
+                </fieldset>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>

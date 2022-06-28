@@ -1,0 +1,79 @@
+#container {
+    margin: 0 auto !important;
+    width: 800px;
+    background-color:lightblue;
+    display: flex;
+    justify-content: space-between;
+    align-items:flex-start;
+    font-family: cursive;
+    font-size: 15px;
+}
+
+#table_page {
+    margin: 0 auto !important;
+    width: 800px;
+    background-color:lightblue;
+    align-items:flex-start;
+    font-family: cursive;
+    font-size: 15px;
+    padding: 20px 10px;
+}
+
+#display_item {
+    margin: 20px auto !important;
+    width: 800px;
+    background-color:lightblue;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items:center;
+    font-family: cursive;
+    font-size: 15px;
+}
+
+#create_cont {
+    margin: 20px auto !important;
+    width: 800px;
+    background-color:lightblue;
+    text-align: center;
+    font-family: cursive;
+    font-size: 15px;
+}
+
+#registeration, #login {
+    text-align: center !important;
+    margin: 20px 30px;
+}
+
+#btn {
+    border: 2px solid black;
+    padding: 5px 15px;
+}
+
+.logout {
+    position: absolute !important;
+    right: 20px !important;
+    top: 20px !important;
+}
+
+.addItem {
+    position: absolute !important;
+    right: 20px !important;
+    bottom: 20px !important;
+}
+
+.home {
+    position: absolute !important;
+    right: 80px;
+    top: 20px;
+}
+
+table, th, td, tr {
+    border: 2px solid black !important;
+    border-collapse: collapse !important;
+}
+
+#t1 {
+    margin-top: 15px;
+    margin-bottom: 40px;
+}
